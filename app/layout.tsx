@@ -15,7 +15,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://drmayareynolds.com'),
+  metadataBase: new URL('https://grow-my-therapy-q812j10ha-aarnavanands-projects.vercel.app/'),
   title: 'Dr. Maya Reynolds, PsyD | Therapy for Adults in Santa Monica, CA',
   description: 'Specialized therapy for high-achieving professionals in Santa Monica. Expertise in burnout, trauma (EMDR), and relationship dynamics.',
   keywords: ['Therapy Santa Monica', 'Psychologist Santa Monica', 'EMDR Therapy', 'Burnout Recovery', 'Relationship Therapy', 'Dr. Maya Reynolds'],
@@ -24,13 +24,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://drmayareynolds.com',
+    url: 'https://grow-my-therapy-q812j10ha-aarnavanands-projects.vercel.app/',
     title: 'Dr. Maya Reynolds, PsyD | Therapy for Adults in Santa Monica, CA',
     description: 'Specialized therapy for high-achieving professionals in Santa Monica. Moving you from burnout to sustainable balance.',
     siteName: 'Dr. Maya Reynolds, PsyD',
     images: [
       {
-        url: '/og-image.jpg', // Assuming an OG image exists or will be added
+        url: '/drmaya.png', // Assuming an OG image exists or will be added
         width: 1200,
         height: 630,
         alt: 'Dr. Maya Reynolds, PsyD - Therapy Santa Monica',
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Dr. Maya Reynolds, PsyD | Therapy for Adults in Santa Monica, CA',
     description: 'Specialized therapy for high-achieving professionals in Santa Monica. Moving you from burnout to sustainable balance.',
-    images: ['/og-image.jpg'],
+    images: ['/drmaya.png'],
   },
   robots: {
     index: true,
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://drmayareynolds.com',
+    canonical: 'https://grow-my-therapy-q812j10ha-aarnavanands-projects.vercel.app/',
   },
 };
 
@@ -76,9 +76,9 @@ export default function RootLayout({
                 '@type': 'MedicalBusiness',
                 name: 'Dr. Maya Reynolds, PsyD',
                 description: 'Specialized therapy for high-achieving professionals in Santa Monica. Expertise in burnout, trauma (EMDR), and relationship dynamics.',
-                image: 'https://drmayareynolds.com/drmaya.png',
-                '@id': 'https://drmayareynolds.com/#business',
-                url: 'https://drmayareynolds.com',
+                image: 'https://grow-my-therapy-q812j10ha-aarnavanands-projects.vercel.app//drmaya.png',
+                '@id': 'https://grow-my-therapy-q812j10ha-aarnavanands-projects.vercel.app//#business',
+                url: 'https://grow-my-therapy-q812j10ha-aarnavanands-projects.vercel.app/',
                 telephone: '(555) 555-5555',
                 priceRange: '$$$',
                 address: {

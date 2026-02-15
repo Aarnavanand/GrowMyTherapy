@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: '/',
             disallow: '/private/',
         },
-        sitemap: 'https://drmayareynolds.com/sitemap.xml',
+        sitemap: 'https://grow-my-therapy-q812j10ha-aarnavanands-projects.vercel.app//sitemap.xml',
     };
 }
