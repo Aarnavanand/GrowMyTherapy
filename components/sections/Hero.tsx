@@ -54,7 +54,7 @@ export default function Hero() {
               >
                 <Image
                   src={hero}
-                  alt="Dr. Maya Reynolds"
+                  alt="Dr. Maya Reynolds, PsyD - Licensed Clinical Psychologist in Santa Monica"
                   fill
                   priority
                   className="object-cover"

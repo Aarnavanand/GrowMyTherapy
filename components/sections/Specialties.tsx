@@ -63,7 +63,7 @@ export default function Specialties() {
                   <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden group-hover:grayscale-0 transition-all duration-700 shadow-lg border-4 border-white">
                     <Image
                       src={specialty.image}
-                      alt={specialty.title}
+                      alt={`${specialty.title} - Specialist therapeutic service for mental health and well-being`}
                       fill
                       className="object-cover scale-110 group-hover:scale-100 transition-transform duration-700"
                     />

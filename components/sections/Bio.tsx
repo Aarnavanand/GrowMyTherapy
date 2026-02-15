@@ -57,7 +57,7 @@ export default function Bio() {
               >
                 <Image
                   src={bioImage}
-                  alt="Dr. Maya Reynolds, PsyD"
+                  alt="Dr. Maya Reynolds, PsyD - Professional headshot, smiling confidently"
                   fill
                   className="object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-[2s] ease-out"
                 />
@@ -67,7 +67,7 @@ export default function Bio() {
               <div className="absolute -bottom-10 -right-4 md:-right-8 w-[50%] aspect-square rounded-full overflow-hidden border-[15px] border-[#F9F7F2] shadow-2xl z-20 hidden sm:block">
                 <Image
                   src={bioImage2}
-                  alt="Serene therapeutic environment detail"
+                  alt="Therapeutic space detail promoting serenity and mindfulness"
                   fill
                   className="object-cover grayscale-[0.4] hover:grayscale-0 transition-all duration-[2s] ease-out"
                 />

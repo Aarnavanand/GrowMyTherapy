@@ -3,7 +3,7 @@
 import React from 'react';
 import { ArrowRight, Check } from 'lucide-react';
 import Image from 'next/image';
-import splitHighlight from '../../public/splitHighlight.webp';
+import splitHighlight from '../../public/SplitHighlight.webp';
 import FadeIn from '../ui/fade-in';
 
 export default function SplitHighlight() {
@@ -24,7 +24,7 @@ export default function SplitHighlight() {
         <div className="relative h-[400px] md:h-[500px] lg:h-full w-full group">
           <Image
             src={splitHighlight}
-            alt="Woman sitting peacefully representing mental clarity"
+            alt="Person experiencing mental clarity and peace after therapy"
             fill
             className="object-cover grayscale-[0.3] group-hover:grayscale-0 transition-all duration-1000"
             sizes="(max-width: 1024px) 100vw, 50vw"

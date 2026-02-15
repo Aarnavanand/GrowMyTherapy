@@ -44,7 +44,7 @@ export default function FAQs() {
             >
               <Image
                 src={faqImage}
-                alt="A peaceful therapeutic setting in Santa Monica"
+                alt="A tranquil and professional therapy room in Santa Monica, designed for comfort and privacy"
                 fill
                 className="object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-1000 ease-out"
                 sizes="(max-width: 1024px) 100vw, 40vw"

@@ -40,7 +40,7 @@ export default function Office() {
                             <div className="relative aspect-[4/3] md:aspect-[16/10] w-full">
                                 <Image
                                     src={office1}
-                                    alt="Main Consultation Area in Santa Monica"
+                                    alt="Main consultation area at Dr. Maya Reynolds' Santa Monica office, featuring comfortable seating and natural light"
                                     fill
                                     className="object-cover grayscale hover:grayscale-0 transition-all duration-1000"
                                 />
@@ -54,7 +54,7 @@ export default function Office() {
                             <div className="relative aspect-square w-full">
                                 <Image
                                     src={office2}
-                                    alt="Office comfort details"
+                                    alt="Detail of the therapeutic environment showing professional and welcoming decor"
                                     fill
                                     className="object-cover grayscale hover:grayscale-0 transition-all duration-1000"
                                 />
