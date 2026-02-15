@@ -1,38 +1,57 @@
 'use client';
 
 import React from 'react';
+import { ArrowRight } from 'lucide-react';
 import FadeIn from '../ui/fade-in';
 
 export default function DarkCTA() {
   return (
-    <section className="bg-[#7E7A4A] py-24 md:py-32 px-8">
-      <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
+    // bg-[#1A1A1A] for the dark theme
+    // py-24 md:py-32 for consistent section spacing
+    <section id="contact" className="relative bg-[#1A1A1A] py-24 md:py-32 lg:py-48 px-6 md:px-12 lg:px-20 overflow-hidden border-t border-white/5">
 
-        <FadeIn fullWidth>
-          {/* Title - Bold and Tracking-tight */}
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-10 tracking-tight">
-            Get started today.
-          </h2>
-        </FadeIn>
+      {/* Decorative Blur Element for Anti-Gravity depth */}
+      <div className="absolute -top-40 -right-40 w-96 h-96 bg-[#4A5D4A]/10 rounded-full blur-[120px] pointer-events-none" />
 
-        <FadeIn delay={0.2} fullWidth>
-          {/* Paragraph - Clean white with max-width for line breaks */}
-          <div className="space-y-1 text-white text-lg md:text-xl max-w-2xl leading-relaxed mb-12">
-            <p>Ready to take the first step towards a happier, healthier you?</p>
-            <p>
-              Contact me to book your first session. I look forward to starting this
-              therapeutic journey with you.
-            </p>
+      <div className="max-w-[1440px] mx-auto relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+
+          {/* Content Column: Shifted to a 10-column span for editorial feel */}
+          <div className="lg:col-span-10 flex flex-col items-start text-left space-y-12">
+
+            <FadeIn direction="left">
+              <div className="space-y-6">
+                <span className="text-[10px] uppercase tracking-[0.5em] text-[#4A5D4A] font-bold">
+                  Final Step
+                </span>
+                <h2 className="text-6xl md:text-8xl lg:text-9xl font-serif font-medium text-[#F9F7F2] tracking-tighter leading-[0.9]">
+                  Begin Your <br />
+                  <span className="italic font-normal text-[#4A5D4A]">Renewal.</span>
+                </h2>
+              </div>
+            </FadeIn>
+
+            <FadeIn direction="left" delay={0.2}>
+              <div className="space-y-8 max-w-2xl">
+                <p className="text-xl md:text-2xl lg:text-3xl text-[#F9F7F2]/80 font-sans leading-relaxed">
+                  Ready to move from burnout to sustainable balance?
+                </p>
+                <div className="h-[1px] w-24 bg-white/10" />
+                <p className="text-base md:text-lg text-[#F9F7F2]/40 font-sans max-w-lg leading-relaxed">
+                  Contact me today to schedule your initial consultation in Santa Monica. I look forward to supporting your therapeutic journey.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn direction="left" delay={0.4}>
+              <button className="group relative bg-[#F9F7F2] text-[#1A1A1A] px-12 py-6 text-xs font-bold tracking-[0.3em] uppercase hover:bg-[#4A5D4A] hover:text-white transition-all duration-500 shadow-2xl flex items-center gap-4">
+                Schedule a Consultation
+                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-2" />
+              </button>
+            </FadeIn>
+
           </div>
-        </FadeIn>
-
-        <FadeIn delay={0.4} fullWidth>
-          {/* Outlined White Button */}
-          <button className="border border-white px-10 py-4 text-white text-xs font-bold tracking-[0.2em] uppercase hover:bg-white hover:text-[#7E7A4A] transition-all duration-300">
-            GET IN TOUCH →
-          </button>
-        </FadeIn>
-
+        </div>
       </div>
     </section>
   );

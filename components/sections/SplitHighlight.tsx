@@ -1,74 +1,76 @@
 'use client';
 
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Check } from 'lucide-react';
 import Image from 'next/image';
 import splitHighlight from '../../public/splitHighlight.webp';
 import FadeIn from '../ui/fade-in';
 
 export default function SplitHighlight() {
   const symptoms = [
-    'Persistent feelings of sadness or hopelessness',
-    'Trouble focusing or making decisions',
-    'Difficulty maintaining relationships',
-    'Feeling constantly exhausted or unmotivated',
-    'A pervasive sense of being overwhelmed',
+    'Persistent feelings of burnout or chronic stress',
+    'Difficulty balancing professional demands with personal life',
+    'Feeling constantly "on edge" or overwhelmed',
+    'Trouble focusing or making critical decisions',
+    'A pervasive sense of perfectionism holding you back',
   ];
 
   return (
-    /* w-screen ensures it ignores parent padding and fills the viewport width */
-    <section className="grid grid-cols-1 lg:grid-cols-2 w-full min-h-[700px] overflow-hidden">
+    // Changed to Charcoal background to create a premium "break" on the page
+    <section className="grid grid-cols-1 lg:grid-cols-2 w-full min-h-[600px] overflow-hidden bg-[#1A1A1A]">
 
-      {/* Left Image Column - Optimized with Next.js Image */}
+      {/* Left Image Column: Editorial Focus */}
       <FadeIn direction="left" fullWidth className="h-full">
-        <div className="relative h-[500px] lg:h-full w-full">
+        <div className="relative h-[400px] md:h-[500px] lg:h-full w-full group">
           <Image
             src={splitHighlight}
-            alt="Woman sitting peacefully with eyes closed"
+            alt="Woman sitting peacefully representing mental clarity"
             fill
-            className="object-cover"
+            className="object-cover grayscale-[0.3] group-hover:grayscale-0 transition-all duration-1000"
             sizes="(max-width: 1024px) 100vw, 50vw"
-            priority
           />
+          {/* Subtle overlay to blend image with charcoal theme */}
+          <div className="absolute inset-0 bg-[#1A1A1A]/20 mix-blend-multiply" />
         </div>
       </FadeIn>
 
-      {/* Right Content Column */}
+      {/* Right Content Column: Refined Spacing & Typography */}
       <FadeIn direction="right" delay={0.2} fullWidth className="h-full">
-        <div className="bg-[#B9B4C3] flex flex-col justify-between h-full">
+        <div className="flex flex-col justify-center h-full text-[#F9F7F2]">
 
-          {/* Main Text Content Area */}
-          <div className="flex-grow flex flex-col justify-center px-8 md:px-16 lg:px-24 py-20">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium text-[#2D3B2D] leading-tight mb-10 tracking-tight">
-              You don't have to do this all <em className="italic">alone</em>.
+          {/* Reduced py-24 for a tighter, more intentional layout */}
+          <div className="px-8 md:px-16 lg:px-24 py-20 md:py-24">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-serif font-medium leading-[1.1] mb-10 tracking-tighter">
+              You don&apos;t have to navigate this <span className="italic font-normal text-[#4A5D4A]">alone.</span>
             </h2>
 
-            <div className="space-y-8 text-[#2D3B2D] max-w-lg">
-              <p className="text-lg md:text-xl font-medium">
-                If you are facing any of these, there's hope:
+            <div className="space-y-12 max-w-lg">
+              <p className="text-xl md:text-2xl font-sans text-[#F9F7F2]/80 leading-relaxed border-l border-[#4A5D4A] pl-6">
+                If you are facing the pressures of a high-stakes career, there is a path toward resilience.
               </p>
 
-              <ul className="space-y-3">
+              {/* Refined List: Replaced bullets with Muted Sage icons */}
+              <ul className="space-y-6">
                 {symptoms.map((symptom, index) => (
-                  <li key={index} className="flex items-start gap-4 text-[15px] md:text-lg">
-                    <span className="text-[#2D3B2D] text-xl leading-none">•</span>
-                    <span>{symptom}</span>
+                  <li key={index} className="flex items-start gap-4">
+                    <Check className="w-5 h-5 text-[#4A5D4A] mt-1 shrink-0" />
+                    <span className="text-base md:text-lg text-[#F9F7F2]/70 font-sans leading-snug">
+                      {symptom}
+                    </span>
                   </li>
                 ))}
               </ul>
 
-              <p className="text-[15px] md:text-lg leading-relaxed pt-4">
-                With empathy and guidance, we'll work together to navigate the challenges life throws your way.
-              </p>
+              {/* Integrated CTA */}
+              <div className="pt-6">
+                <button className="group flex items-center gap-4 text-[#F9F7F2] text-xs font-bold tracking-[0.3em] uppercase transition-all">
+                  <span className="border-b border-[#F9F7F2]/30 pb-1 group-hover:border-[#4A5D4A] transition-colors">
+                    Reach Out Today
+                  </span>
+                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-2 text-[#4A5D4A]" />
+                </button>
+              </div>
             </div>
-          </div>
-
-          {/* Bottom Call to Action Footer */}
-          <div className="border-t border-[#2D3B2D] py-10 w-full flex justify-center items-center bg-[#B9B4C3]">
-            <button className="flex items-center gap-2 text-[#2D3B2D] text-xs font-bold tracking-[0.2em] uppercase hover:opacity-60 transition-opacity group">
-              Work with me
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </button>
           </div>
         </div>
       </FadeIn>

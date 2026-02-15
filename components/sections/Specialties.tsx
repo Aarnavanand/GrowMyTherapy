@@ -2,65 +2,70 @@
 
 import React from 'react';
 import Image from 'next/image';
-import specialties1 from '../../public/specialties1.webp'
-import specialties2 from '../../public/specialties2.webp'
-import specialties3 from '../../public/specialties3.webp'
+import specialties1 from '../../public/BurnoutRecovery.jpg'
+import specialties2 from '../../public/TraumaTherapy.avif'
+import specialties3 from '../../public/RelationshipDynamics.avif'
 import FadeIn from '../ui/fade-in';
 
 export default function Specialties() {
   const specialties = [
     {
-      title: 'Self-Esteem',
-      description: "Building a strong sense of self-worth is key to living a fulfilled life. Let's work together to bolster your self-esteem.",
+      title: 'Burnout Recovery',
+      description: "For high-achieving professionals dealing with chronic stress. We'll implement practical tools to restore your energy and sense of self.",
       image: specialties1,
     },
     {
-      title: 'Relationships',
-      description: "Navigating relationships can be complex. I'm here to guide you through these complexities to help you form healthier connections.",
+      title: 'Trauma Therapy',
+      description: "A powerful tool for processing past experiences. I provide a safe, paced environment to help you feel regulated and grounded.",
       image: specialties2,
     },
     {
-      title: 'Burnout',
-      description: "Feeling overwhelmed by your career is more common than you think. Together, we'll identify strategies to manage and prevent burnout.",
+      title: 'Relationship Dynamics',
+      description: "Navigating complex connections is easier with guidance. We'll explore patterns to help you form healthier, more fulfilling bonds.",
       image: specialties3,
     },
   ];
 
   return (
-    <section className="bg-[#FAF7F2] py-20 px-8 md:px-16 lg:px-24 overflow-hidden">
-      <div className="max-w-7xl mx-auto">
-        {/* Section Heading */}
-        <FadeIn fullWidth>
-          <h2 className="text-5xl md:text-6xl font-medium text-[#2D3B2D] text-center mb-20 tracking-tight">
-            My Specialties
-          </h2>
-        </FadeIn>
+    // bg-white creates a clean break from the cream Office section
+    // py-24 reduces the massive vertical space you saw previously
+    <section id="specialties" className="bg-white py-24 md:py-32 overflow-hidden border-t border-[#1A1A1A]/5">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20">
 
-        {/* Specialties Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* Section Heading */}
+        <div className="mb-20 text-center">
+          <FadeIn>
+            <h2 className="text-5xl md:text-7xl font-serif font-medium text-[#1A1A1A] tracking-tighter leading-none">
+              Clinical <span className="italic font-normal text-[#4A5D4A]">Expertise</span>
+            </h2>
+          </FadeIn>
+        </div>
+
+        {/* Specialties Grid: Wider container (max-w-[1440px]) and reduced height (min-h-[500px]) */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {specialties.map((specialty, index) => (
-            <FadeIn key={index} delay={index * 0.2} fullWidth className="h-full">
+            <FadeIn key={index} delay={index * 0.15}>
               <div
-                className="bg-[#E4E0D7] border border-[#2D3B2D]/10 p-10 md:p-12 flex flex-col min-h-[600px] transition-all hover:shadow-sm h-full"
+                className="bg-[#F9F7F2] p-10 md:p-12 flex flex-col items-center text-center justify-between min-h-[500px] group transition-all duration-500 hover:shadow-2xl border border-transparent hover:border-[#4A5D4A]/10"
               >
                 {/* Text Content */}
-                <div className="flex-grow space-y-8">
-                  <h3 className="text-xl font-bold text-[#2D3B2D] tracking-tight">
+                <div className="space-y-6">
+                  <h3 className="text-2xl md:text-3xl font-serif font-medium text-[#1A1A1A] tracking-tight">
                     {specialty.title}
                   </h3>
-                  <p className="text-[#2D3B2D] leading-relaxed text-[15px]">
+                  <p className="text-[#1A1A1A]/60 leading-relaxed text-base md:text-lg font-sans max-w-[280px] mx-auto">
                     {specialty.description}
                   </p>
                 </div>
 
-                {/* Large Circular Image at Bottom */}
-                <div className="mt-12 flex justify-center">
-                  <div className="relative w-56 h-56 md:w-64 md:h-64 rounded-full overflow-hidden">
+                {/* Circular Image: Re-implemented as requested */}
+                <div className="mt-10">
+                  <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden group-hover:grayscale-0 transition-all duration-700 shadow-lg border-4 border-white">
                     <Image
                       src={specialty.image}
                       alt={specialty.title}
                       fill
-                      className="object-cover grayscale-[20%] contrast-[1.1]"
+                      className="object-cover scale-110 group-hover:scale-100 transition-transform duration-700"
                     />
                   </div>
                 </div>

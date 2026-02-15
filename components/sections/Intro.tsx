@@ -3,55 +3,62 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
-import intro from '../../public/intro.webp'
+import intro from '../../public/intro.webp';
 import FadeIn from '../ui/fade-in';
 
 export default function Intro() {
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-2 w-full min-h-[600px] overflow-hidden">
-      {/* Left Content Column */}
-      <FadeIn direction="left" fullWidth className="h-full">
-        <div className="bg-[#E4E0D7] flex flex-col justify-between border-r border-[#2D3B2D]/10 h-full">
+    // Reduced pt-12 and pb-24 for a tighter, high-end flow
+    <section className="relative w-full bg-white pt-12 pb-24 md:pb-32 lg:pb-40 overflow-hidden">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-16 lg:gap-16 items-start">
 
-          {/* Main Text Area */}
-          <div className="flex-grow flex flex-col justify-center px-8 md:px-16 lg:px-24 py-16">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium text-[#2D3B2D] leading-tight mb-10">
-              Live a fulfilling life.
-            </h2>
+          <div className="lg:col-span-6 relative z-10 pt-8 md:pt-16">
+            <FadeIn direction="left">
+              <div className="space-y-10">
+                <h2 className="text-5xl md:text-7xl lg:text-8xl font-serif font-medium text-[#1A1A1A] leading-[1.0] tracking-tighter">
+                  Warm. <br />
+                  Collaborative. <br />
+                  <span className="italic font-normal text-[#4A5D4A]">Grounded.</span>
+                </h2>
 
-            <div className="space-y-6 text-[#2D3B2D] text-lg md:text-xl max-w-md leading-relaxed">
-              <p>
-                Life can be challenging—especially when you're trying to balance
-                your personal and professional life.
-              </p>
-              <p>
-                It's easy to feel like you're alone in facing these challenges,
-                but I want you to know that I'm here to help.
-              </p>
-            </div>
+                <div className="space-y-8 text-[#1A1A1A]/70 text-lg md:text-xl lg:text-2xl max-w-lg leading-relaxed font-sans border-l-2 border-[#4A5D4A]/20 pl-8">
+                  <p>
+                    You appear functional and high-achieving on the outside, yet internally you feel &ldquo;on edge&rdquo;.
+                  </p>
+                  <p className="text-base text-[#1A1A1A]/50">
+                    Integrating **CBT** and **EMDR** to address both the emotional and physiological layers of your healing.
+                  </p>
+                </div>
+
+                <div className="pt-2">
+                  <button className="group flex items-center gap-6 text-[#1A1A1A] text-xs font-bold tracking-[0.3em] uppercase transition-all">
+                    <span className="border-b border-[#1A1A1A] pb-1 group-hover:border-[#4A5D4A]">
+                      My Approach
+                    </span>
+                    <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-2" />
+                  </button>
+                </div>
+              </div>
+            </FadeIn>
           </div>
 
-          {/* Bottom Call to Action */}
-          <div className="border-t border-[#2D3B2D] py-8 w-full flex justify-center items-center">
-            <button className="flex items-center gap-2 text-[#2D3B2D] text-xs font-bold tracking-[0.2em] uppercase hover:opacity-60 transition-opacity">
-              Get in touch
-              <ArrowRight className="w-4 h-4" />
-            </button>
+          <div className="lg:col-span-6 relative mt-10 lg:mt-0">
+            <FadeIn direction="right" delay={0.3}>
+              <div className="relative aspect-[4/5] w-full max-w-[500px] mx-auto lg:ml-auto overflow-hidden shadow-lg rounded-sm">
+                <Image
+                  src={intro}
+                  alt="Clinical environment representation"
+                  fill
+                  className="object-cover grayscale-[0.1] hover:grayscale-0 transition-all duration-700"
+                />
+              </div>
+              <div className="absolute -bottom-4 -left-4 w-1/2 h-1/2 bg-[#F9F7F2] -z-10 rounded-sm" />
+            </FadeIn>
           </div>
-        </div>
-      </FadeIn>
 
-      {/* Right Image Column */}
-      <FadeIn direction="right" delay={0.2} fullWidth className="h-full">
-        <div className="h-[400px] lg:h-full lg:max-h-[700px] overflow-hidden relative">
-          <Image
-            src={intro}
-            alt="Coffee, lilacs, and a notebook on a bed"
-            fill
-            className="object-cover"
-          />
         </div>
-      </FadeIn>
+      </div>
     </section>
   );
 }

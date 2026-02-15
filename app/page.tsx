@@ -1,6 +1,7 @@
 import Header from '@/components/sections/Header';
 import Hero from '@/components/sections/Hero';
 import Intro from '@/components/sections/Intro';
+import Office from '@/components/sections/Office';
 import Specialties from '@/components/sections/Specialties';
 import SplitHighlight from '@/components/sections/SplitHighlight';
 import Bio from '@/components/sections/Bio';
@@ -15,6 +16,7 @@ export default function Home() {
       <Header />
       <Hero />
       <Intro />
+      <Office />
       <Specialties />
       <SplitHighlight />
       <Bio />

@@ -1,31 +1,60 @@
 'use client';
 
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
-import hero from '../../public/hero.webp'
+import hero from '../../public/drmaya.png';
 import FadeIn from '../ui/fade-in';
 
 export default function Hero() {
   return (
-    <div className="bg-[#FAF7F2] font-sans">
+    // Removed min-h-screen to prevent excessive empty space at the bottom
+    <section className="relative w-full pt-40 lg:pt-52 pb-24 bg-[#F9F7F2] overflow-hidden">
+      <div className="absolute top-0 right-0 w-1/3 h-full bg-white/50 -z-10" />
 
-      {/* Hero Section */}
-      <section className="w-full pt-24 lg:pt-20 pb-0 md:px-16 overflow-hidden">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
 
-          {/* Image Container with Custom Arch Mask */}
-          <div className="relative flex justify-center lg:justify-start w-full">
-            <FadeIn direction="right" delay={0.2} fullWidth>
+          <div className="lg:col-span-7 flex flex-col space-y-10 order-2 lg:order-1 relative z-10">
+            <FadeIn>
+              <div className="space-y-4">
+                <span className="text-xs uppercase tracking-[0.4em] text-[#4A5D4A] font-bold block mb-4">
+                  Licensed Clinical Psychologist
+                </span>
+                <h1 className="text-6xl md:text-8xl lg:text-9xl font-serif font-medium text-[#1A1A1A] leading-[0.9] tracking-tighter">
+                  Reclaim Your <br />
+                  <span className="italic font-normal text-[#4A5D4A]">Resilience.</span>
+                </h1>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.2}>
+              <div className="space-y-12">
+                <p className="text-xl md:text-2xl text-[#1A1A1A]/70 leading-relaxed font-sans max-w-xl">
+                  Specialized therapy for high-achieving professionals in Santa Monica.
+                  Moving you from burnout to sustainable balance.
+                </p>
+
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-8">
+                  <button className="bg-[#1A1A1A] text-white px-10 py-5 text-xs uppercase tracking-widest font-bold hover:bg-[#4A5D4A] transition-all shadow-lg">
+                    Schedule a Consultation
+                  </button>
+                  <span className="text-[#1A1A1A]/40 text-[10px] uppercase tracking-[0.3em] font-bold">
+                    In-Person & Telehealth
+                  </span>
+                </div>
+              </div>
+            </FadeIn>
+          </div>
+
+          <div className="lg:col-span-5 flex justify-center lg:justify-end order-1 lg:order-2">
+            <FadeIn direction="right" delay={0.4} className="relative w-full max-w-[500px]">
               <div
-                className="w-full max-w-[550px] aspect-[4/5] overflow-hidden relative"
-                style={{
-                  borderRadius: '500px 500px 0 0', // Creates the arch
-                }}
+                className="w-full aspect-[4/5] overflow-hidden relative shadow-2xl"
+                style={{ borderRadius: '1000px 1000px 0 0' }}
               >
                 <Image
                   src={hero}
-                  alt="Person holding a bouquet of lilacs"
+                  alt="Dr. Maya Reynolds"
                   fill
                   priority
                   className="object-cover"
@@ -33,31 +62,8 @@ export default function Hero() {
               </div>
             </FadeIn>
           </div>
-
-          {/* Text Content */}
-          <div className="text-center flex flex-col items-center space-y-8">
-            <FadeIn delay={0.4}>
-              <h1 className="text-5xl md:text-7xl lg:text-[5.5rem] font-medium text-[#2D4024] leading-[1.1] tracking-tight">
-                Live your life <br /> in full bloom
-              </h1>
-            </FadeIn>
-
-            <FadeIn delay={0.6}>
-              <p className="text-lg md:text-xl text-[#2D4024]">
-                Therapy for Adults in Minneapolis, MN.
-              </p>
-            </FadeIn>
-
-            <FadeIn delay={0.8}>
-              <button className="mt-4 border border-[#2D3B2D] px-8 py-3.5 flex items-center gap-3 text-[#2D3B2D] hover:bg-[#2D3B2D] hover:text-white transition-all duration-300 group tracking-widest text-xs font-bold">
-                CONNECT WITH ME
-                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-              </button>
-            </FadeIn>
-          </div>
-
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }
